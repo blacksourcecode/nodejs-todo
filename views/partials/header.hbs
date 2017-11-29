@@ -1,0 +1,23 @@
+<div class="topnav">
+    <div class="container">
+        <div class="topmenu pull-right">
+            <button class="btn btn-primary topmenu-btn" onclick="openNav()">&#9776;</button>
+        </div>
+    </div>
+</div>
+<div id="mySidenav" class="sidenav">
+        <div class="container">
+        <div class="topmenu pull-right">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+      <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+  </a>
+    </div>
+</div>
+  <hr class="close-break">
+        {{# if login }}
+            {{> logout }}
+        {{ else }}
+          {{> signin }}
+        {{/if}}
+    </div>
+<div class="emtyspace"></div>

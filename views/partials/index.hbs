@@ -1,0 +1,37 @@
+    <div class="container">
+        <h1>{{title}}</h1>
+            <form action="/todo" method="post">
+                <div class="input">
+                    <div class="form-group">
+                        <input type="text" id="title" class="form-control todo-input" name="todo" placeholder="Write a new task todo" autocomplete="off">
+                    </div>
+                </div>
+                <div class="btn-todo pull-right">
+                    <button type="submit" class="btn btn-success btn-circle btn-lg"><i class="glyphicon glyphicon-plus"></i></button>
+                </div>
+            </form>
+    <div class="table-todo">
+        <table class="table bordered">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th class="text-center">Todo</th>
+                <th class="text-center">Delete</th>
+            </tr>
+            </thead>
+                {{# each doc }}
+                    <tbody>
+                        <tr>
+                            <td>{{startAtOne @index}}</td>
+                            <td class="text-center">{{this.todo}}</td>
+                            <td class="text-center">         
+                            <form action="/todo/delete/{{this._id}}" method="post">
+                                <input type="hidden" value="{{this._id}}">
+                                <button class="btn btn-danger btn-circle btn-lg" type="sumit"><i class="fa fa-trash-o fa-1x" aria-hidden="true"></i></button>
+                            </form></td>
+                        </tr>
+                    </tbody>
+                {{/each}}
+        </table>
+    </div>
+</div>

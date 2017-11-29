@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Welcome to my Node.js Todo app</h1>
+            <h3>Below there's a short description on what todo</h3>
+            <br>
+            <p>
+                You have to be logged in to see or create a Todo. Go to the seed folder and
+                <span>run node admin.js</span> tab the menu icon to login.
+                <br><br>
+                E-mail: admin@admin.com 
+                <br>
+                Password: admin
+                <br><br>
+                When loggedin tab the menu icon if you wish to logout 
+            </p>
+                <br>           
+            <h4>The applikation</h4>
+            <p>
+                The applikation uses Node.js for serverside and MongoDb for storage.
+                For authentication the applikation uses passport. The applikation uses 
+                moongose to handle create, delete and retrive data from the database  
+                <br>
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            {{> gallery}}
+        </div>
+    </div>
+</div>
